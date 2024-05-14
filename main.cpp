@@ -9,9 +9,7 @@
 #include <iostream>
 using namespace std;
 
-/*void kiir(){
-    cout << "X";
-}*/
+
 
 
 int main()
