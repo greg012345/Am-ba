@@ -14,7 +14,6 @@ using namespace std;
 
 int main()
 {
-    //Ablak *a = new Ablak(600,600);
     Alkalmazas *alk = new Alkalmazas;
     vector <string> szin {"kek","zold","sarga","feher","fekete"};
     vector <string> szamok{"egy","ketto","harom","negy","ot"};
