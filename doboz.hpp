@@ -5,7 +5,7 @@
 class Doboz :public Oswid{
 protected:
     int aka,_hossz,_akt;
-    bool rajzol,kor;
+    bool rajzol,kor,volte;
 public:
     Doboz (Ablak * _ablak,int x, int y, int s_x, int s_y, int szél,int _hossz,int _akt);
     virtual void rajz();

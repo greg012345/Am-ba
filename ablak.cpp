@@ -50,7 +50,6 @@ while(gin >> ev ) {
 };
 
 ofstream ofs("ki.txt");
-
 for(int a = 0; a<15;a++){{
         for(int b = 0;b<15;b++){
             ofs << xx[a][b] << " ";
@@ -59,8 +58,6 @@ for(int a = 0; a<15;a++){{
     }
 }
 ofs.close();
-
-
 };
 int Ablak::ertekAtadas(){
     int meret = 0;
@@ -80,17 +77,77 @@ int Ablak::ertekAtadas(){
     }
 };
 // 2 = x 1 = kör
-int Ablak::gyoztes(){
-    int aktx = 0;
+/*bool Ablak::gyoztes(){
     for(int a = 0; a<15;a++){
         for(int b = 0;b<15;b++){
-            if(xx[a][b] == 2){
-                aktx++;
-                if(aktx == 3){
-                    return 100;
+            bool gyoz = true;
+            for(size_t k = 0;k<5;k++){
+                if(xx[a][b+k] != 2){
+                    gyoz = false;
+                    break;
                 }
+            }
+            if(gyoz){
+                return true;
             }
         }
     }
+};*/
+
+bool Ablak::gyoztes(int jatekos){
+const int meret = 15;
+const int nyer  = 5;
+
+for (int i = 0; i < meret; ++i) {
+    for (int j = 0; j <= meret - nyer; ++j) {
+        bool gyoz = true;
+        for (int k = 0; k < nyer; ++k) {
+            if (xx[i][j + k] != jatekos) {
+                gyoz = false;
+                break;
+            }
+        }
+        if (gyoz) return true;
+    }
+}
+
+for (int j = 0; j < meret; ++j) {
+    for (int i = 0; i <= meret - nyer; ++i) {
+        bool gyoz = true;
+        for (int k = 0; k < nyer; ++k) {
+            if (xx[i + k][j] != jatekos) {
+                gyoz = false;
+                break;
+            }
+        }
+        if (gyoz) return true;
+    }
+}
+
+for (int i = 0; i <= meret - nyer; ++i) {
+    for (int j = 0; j <= meret - nyer; ++j) {
+        bool gyoz = true;
+        for (int k = 0; k < nyer; ++k) {
+            if (xx[i + k][j + k] != jatekos) {
+                gyoz = false;
+                break;
+            }
+        }
+        if (gyoz) return true;
+    }
+}
+for (int i = nyer - 1; i < meret; ++i) {
+    for (int j = 0; j <= meret - nyer; ++j) {
+        bool gyoz = true;
+        for (int k = 0; k < nyer; ++k) {
+            if (xx[i - k][j + k] != jatekos) {
+                gyoz = false;
+                break;
+            }
+        }
+        if (gyoz) return true;
+    }
+}
+return false;
 };
 

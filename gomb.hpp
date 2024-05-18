@@ -18,5 +18,6 @@ public:
     virtual void futas(genv::event ev);
     virtual bool tallal(int poz_x, int poz_y,int doboz_x,int doboz_y);
     virtual int adat();
+    virtual int adat2();
 };
 #endif // GOMB_HPP

@@ -23,7 +23,7 @@ void Gomb::rajz(){
 }
 
 void Gomb::futas(genv::event ev){
-    if(tallal(ev.pos_x,ev.pos_y,doboz_x,doboz_y) && ev.button == btn_right){
+    if(tallal(ev.pos_x,ev.pos_y,doboz_x,doboz_y) && ev.button == btn_left){
         //szo = _nev[rand() % _nev.size()];
         fv();
     }
@@ -31,5 +31,7 @@ void Gomb::futas(genv::event ev){
 int Gomb::adat(){
     return 0;
 }
-
+int Gomb::adat2(){
+    return 0;
+}
 

@@ -7,6 +7,7 @@
 #include <iostream>
 class Alkalmazas : public Ablak{
     Doboz * d1;
+    Gomb * d2;
 public:
     Alkalmazas();
     void pakol();
