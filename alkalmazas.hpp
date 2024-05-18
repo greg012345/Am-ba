@@ -4,13 +4,9 @@
 #include "menu.hpp"
 #include "gomb.hpp"
 #include "doboz.hpp"
+#include <iostream>
 class Alkalmazas : public Ablak{
-    /*Gomb * d1;
-    Gomb * d2;
-    Menu * d3;
-    Menu * d4;*/
-    Doboz * d5;
-    //Doboz * d6;
+    Doboz * d1;
 public:
     Alkalmazas();
     void pakol();

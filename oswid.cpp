@@ -9,7 +9,7 @@ Oswid::Oswid(Ablak * a, int x, int y, int sx, int sy,int szam) :_ablak(a), _x(x)
 
 bool Oswid::aktiv(int poz_x, int poz_y)
 {
-    return poz_x>_x && poz_x<_x+doboz_x+doboz_x/2 && poz_y>_y && poz_y<_y+doboz_y+doboz_y/2;
+    return poz_x>_x && poz_x<_x+doboz_x && poz_y>_y && poz_y<_y+doboz_y;
 }
 
 

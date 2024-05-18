@@ -60,15 +60,11 @@ void Doboz::futas(event ev)
 }
 
 int Doboz::adat(){
-    if(kor && rajzol){
-        return _szam;
-    }
+    return _szam;
 }
 
 int Doboz::adat2(){
-    if(kor && rajzol){
     return _hossz;
-}
 }
 
 void Doboz::kiirás(){
