@@ -49,14 +49,17 @@ void Doboz::rajz(){
 
 void Doboz::futas(event ev)
 {
-    if(tallal(ev.pos_x,ev.pos_y,_x,_y,doboz_x,doboz_y) && ev.button == -btn_left && _ablak->ertekAtadas() == 2){
+    if(tallal(ev.pos_x,ev.pos_y,_x,_y,doboz_x,doboz_y)
+        && ev.button == -btn_left && _ablak->ertekAtadas() == 2){
         rajzol = true;
         kiirás();
     }
-    if(tallal(ev.pos_x,ev.pos_y,_x,_y,doboz_x,doboz_y) && ev.button == -btn_left && _ablak->ertekAtadas() == 1 ){
+    if(tallal(ev.pos_x,ev.pos_y,_x,_y,doboz_x,doboz_y)
+        && ev.button == -btn_left && _ablak->ertekAtadas() == 1 ){
         kor = true;
         kiirás();
     }
+
 }
 
 int Doboz::adat(){
@@ -68,7 +71,8 @@ int Doboz::adat2(){
 }
 
 void Doboz::kiirás(){
-    cout << _ablak->ertekAtadas();
+    //cout << _ablak->ertekAtadas();
+    cout << _ablak->gyoztes();
 }
 
 

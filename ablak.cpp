@@ -66,7 +66,7 @@ int Ablak::ertekAtadas(){
     int meret = 0;
     for(int a = 0; a<15;a++){{
             for(int b = 0;b<15;b++){
-                if(xx[a][b] == 1){
+                if(xx[a][b] != 0){
                     meret++;
                 }
             }
@@ -77,6 +77,20 @@ int Ablak::ertekAtadas(){
     }
     else{
         return 2;
+    }
+};
+// 2 = x 1 = kör
+int Ablak::gyoztes(){
+    int aktx = 0;
+    for(int a = 0; a<15;a++){
+        for(int b = 0;b<15;b++){
+            if(xx[a][b] == 2){
+                aktx++;
+                if(aktx == 3){
+                    return 100;
+                }
+            }
+        }
     }
 };
 

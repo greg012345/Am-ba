@@ -11,6 +11,7 @@ public:
     void add_wid(Oswid * _ablak){c.push_back(_ablak);}
     //void nyit();
     int ertekAtadas();
+    int gyoztes();
 };
 
 
